@@ -1,0 +1,27 @@
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="post-heading">
+                <div class="pull-left image">
+                    <img src="<%if(user.avatar){%><%=user.avatar%><%}else{%>/images/unonimus.png<%}%>" class="img-circle avatar avatar_middle">
+                </div>
+                <div class="flex-row pull-left meta">
+                    <div class="title h5">
+                        <a href="#"><b><%=user.userNick%></b></a>
+                    </div>
+                </div>
+            </div>
+            <div class="send-message-container">
+                <textarea id="send-message-body" rows="8" cols="25"></textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="send-message-submit">Написать</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="send-message-cancel">Отмена</button>
+        </div>
+    </div>
+</div>

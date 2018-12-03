@@ -1,0 +1,18 @@
+<div class="thumbnail">
+    <div class="card">
+        <img class="card-img-top" src="<%if(news.get('illustration')){%><%=news.get('illustration')%><%} else{ %>/images/small-no-image.png<%}%>" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-text"><%=news.get("title")%></h5>
+            <p class="card-text pop-news-description"><%=news.get("description")%></p>
+            <div class="comments" id="pop-news-comments"><ul id="pop-comments-list"></ul></div>
+        </div>
+        <div class="message-input">
+            <div class="wrap">
+                <input type="hidden" id="pop-news-id" value="<%=news.get('id')%>"/>
+                <input type="text" id="pop-news-comment-input" placeholder="Write your message..." />
+                <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                <button class="submit" id="pop-news-comment-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

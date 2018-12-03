@@ -1,0 +1,4 @@
+<li <%if(message.get('userTo').userNick == current.get('userNick')){%> class="sent" <%} else {%> class="replies" <%}%> >
+    <img src="<%if(message.get('userTo').avatarUrl){%><%=message.get('userTo').avatarUrl%><%} else {%>/images/unonimus.png<%}%>" alt="" />
+    <p><%=message.get('message')%></p>
+</li>

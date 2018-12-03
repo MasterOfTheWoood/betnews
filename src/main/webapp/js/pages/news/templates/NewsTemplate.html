@@ -1,0 +1,22 @@
+<div class="col-sm-12 col-md-6 news-cell">
+    <div class="thumbnail">
+        <div class="panel-heading">
+            <div class="caption">
+                <input type="hidden" name="newsId" value="<%=news.get('id')%>">
+                <div class="news-title"><h2><%=news.get("title")%></h2></div>
+                <%if(news.get("avatar")){%>
+                    <div class="news-avatar"><img src="<%=news.get('avatar')%>" alt="<%=news.get('title')%>"></div>
+                <%}%>
+                <div class="news-info-row">
+                    <div class="news-topic"><%=news.get("newsTopic")%></div>
+                    <div class="news-author" id="news-author-<%=news.get('id')%>"></div>
+                    <div class="news-date"><%=news.get("createDate")%></div>
+                </div>
+                <div class="news-description">
+                    <div class="news-description-min"><%=news.get("description")%></div>
+                </div>
+                <a class="news-description-more" data-news-id="<%=news.get('id')%>">Подробно</a>
+            </div>
+        </div>
+    </div>
+</div>

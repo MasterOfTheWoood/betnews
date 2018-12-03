@@ -1,0 +1,75 @@
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Добавлление новости</h4>
+        </div>
+        <div class="modal-body">
+            <form action="/member/news/create" method="post" id="add-news-form">
+            <div class="form-group row">
+                <label for="add-news-title" class="col-2 col-form-label">Заголовок</label>
+                <div class="col-10">
+                    <input class="form-control" name="title" type="text" value="" id="add-news-title">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="add-news-image" class="col-2 col-form-label">Картинка</label>
+                <div class="col-10">
+                    <input class="form-control" name="image" type="file" id="add-news-image">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="add-news-topic" class="col-2 col-form-label">Раздел</label>
+                <div class="col-10">
+                    <select class="form-control" name="newsTopic" id="add-news-topic">
+                        <%topics.forEach(function(topic){%>
+                            <option value="<%=topic.get('key')%>"><%=topic.get("name")%></option>
+                        <%})%>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="add-news-type" class="col-2 col-form-label">Тип</label>
+                <div class="col-10">
+                    <select class="form-control" name="newsType" id="add-news-type">
+                        <%types.forEach(function(type){%>
+                            <option value="<%=type.get('key')%>"><%=type.get('name')%></option>
+                        <%})%>
+                    </select>
+                </div>
+            </div>
+            <div id="add-news-arbiter-container" class="form-group row" style="display: none">
+                <label  for="add-news-arbiter" class="col-2 col-form-label">Арбитр</label>
+                <div class="col-10">
+                    <select class="form-control" name="arbiter[id]" id="add-news-arbiter"></select>
+                </div>
+            </div>
+            <div id="add-news-can-vote-users-container" class="form-group row" style="display: none">
+                <label  for="add-news-canVoteUsers" class="col-2 col-form-label">Участники</label>
+                <div class="col-10">
+                    <select class="form-control" name="canVoteUsers[][id]" id="add-news-canVoteUsers" multiple="multiple"></select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="add-news-description" class="col-2 col-form-label" style="float: none">Описаине</label>
+                <div class="col-10">
+                    <textarea id="add-news-description" name="description" rows="10" cols="60"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="flex-row">
+                    <label class="col-2 col-form-label">Исходы</label>
+                    <div id="news-add-outcome"></div>
+                </div>
+            </div>
+            <div id="news-add-outcomes"></div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="news-add-submit">Добавить</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="news-add-close">Close</button>
+        </div>
+    </div>
+</div>
+

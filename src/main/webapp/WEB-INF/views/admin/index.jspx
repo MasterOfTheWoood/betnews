@@ -1,0 +1,11 @@
+<!--
+  Created by IntelliJ IDEA.
+  User: Евгений
+  Date: 21.03.15
+  Time: 20:21
+  To change this template use File | Settings | File Templates.
+-->
+<div version="2.0">
+    Добро пожаловать в админку.
+    <div id="main-container"></div>
+</div>

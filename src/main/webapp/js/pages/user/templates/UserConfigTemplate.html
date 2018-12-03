@@ -1,0 +1,119 @@
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Настройки</h4>
+        </div>
+        <div class="modal-body">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#settings">Настройки</a></li>
+                <li><a data-toggle="tab" href="#news">Новостии</a></li>
+                <li><a data-toggle="tab" href="#finances">Финансы</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="settings" class="tab-pane fade in active">
+                    <form action="#" id="user-settings-form">
+                        <input name="id" value="<%=user.get('id')%>" type="hidden"/>
+                        <div class="form-group row">
+                            <div class="avatarWrapper">
+                                <div class="avatarNav">
+                                    <a href="#" class="avZoomIn" data-toggle="tooltip" data-placement="right" title="Zoom In"><span class="fa fa-plus-circle"></span></a>
+                                    <a href="#" class="avZoomOut" data-toggle="tooltip" data-placement="right" title="Zoom Out"><span class="fa fa-minus-circle"></span></a>
+                                    <a href="#" class="avSave" data-toggle="tooltip" data-placement="right" title="Save"><span class="fa fa-cloud-upload"></span></a>
+                                    <span class="divider"><span class="fa fa-ellipsis-h"></span></span>
+                                    <a href="#" class="avDelete" data-toggle="tooltip" data-placement="right" title="Delete"><span class="fa fa-trash"></span></a>
+                                </div>
+                                <div class="avatar cursor-pointer"> <!-- active cursor-move cursor-wait cursor-wait cursor-pointer-->
+                                    <div class="uploadOverlay"><i class="fa fa-cloud-upload"></i></div>
+                                    <img src="<%=user.get('avatar')%>">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div id="user-nick-edit-holder">
+                                <div id="user-nick-input-holder"><input name="email" value="<%=user.get('userNick')%>" class="form-control"/></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label>E-mail:</label>
+                            <div id="user-email-edit-holder">
+                                <div id="user-email-input-holder"><input name="email" value="<%=user.get('email')%>" class="form-control"/></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label>Имя:</label>
+                            <div id="user-firstName-edit-holder">
+                                <div id="user-firstName-input-holder"><input name="firstName" value="<%=user.get('firstName')%>" class="form-control"/></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label>Отчество:</label>
+                            <div id="user-middleName-edit-holder">
+                                <div id="user-middleName-input-holder"><input name="middleName" value="<%=user.get('middleName')%>" class="form-control"/></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label>Фамилия:</label>
+                            <div id="user-lastName-edit-holder">
+                                <div id="user-lastName-input-holder"><input name="lastName" value="<%=user.get('lastName')%>" class="form-control"/></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label>Дата Роджения:</label>
+                            <div class='input-group date' id='datetimepicker2'>
+                                <input type='text' class="form-control" />
+                            </div>
+                        </div>
+                        <div id="user-account-holder">
+                            <%=user.get('account').balance%>
+                        </div>
+                    </form>
+                </div>
+                <div id="news" class="tab-pane fade">
+                    <h3>Управление новостями</h3>
+                    <form action="#" class="form-inline">
+                        <select name="type" class="form-control filter-search-input" title="">
+                            <option>Все</option>
+                            <option>Созданные мной</option>
+                            <option>Где я арбитр</option>
+                            <option>Где я делал ставку</option>
+                        </select>
+                        <input type="text" class="form-control filter-search-input" placeholder="Search for...">
+                        <button id="filter-search-button" class="btn btn-default bet-icon-button" type="button">
+                            <span id="filter-search-button-icon" class="glyphicon" style="background-size: 100%;"></span>
+                        </button>
+                        <button id="filter-add-news-button" class="btn btn-default bet-icon-button" type="button">
+                            <span id="config-add-news-button-icon" class="glyphicon" style="background-size: 100%;"></span>
+                        </button>
+                    </form>
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>Название</th>
+                            <th>Тип</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <%userNews.forEach(function(news){%>
+                            <tr>
+                                <td></td>
+                                <td><%=news.get('title')%></td>
+                                <td><%=news.get('newsType')%></td>
+                            </tr>
+                        <%});%>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="finances" class="tab-pane fade">
+                    <h3>Управление финансами</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="login-submit">Сохранить</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="user-config-close">Close</button>
+        </div>
+    </div>
+</div>

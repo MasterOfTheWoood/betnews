@@ -1,0 +1,361 @@
+body{
+    background-color: #ffffff;
+}
+
+a{
+    cursor: pointer;
+}
+#top-container{
+    height: 60px;
+    position: relative;
+    width: 100%;
+    background-image: url("/images/header.png");
+    background-repeat: no-repeat;
+}
+#logo1{
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+#logo2{
+    position: absolute;
+    left: 270px;
+    top: 2px;
+}
+
+#main-right{
+    width: 200px;
+    float: right;
+}
+#main-left{
+    width: 800px;
+    float: left;
+}
+#main-bottom{
+    width: 1000px;
+    clear: both;
+}
+#dijitTitlePaneContentOuter{
+    background: none;
+}
+#user-info{
+
+}
+#properties-menu-item{
+    background-image: url("/images/settings.png");
+    width: 44px;
+    height: 44px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#login-menu-item{
+    background-image: url("/images/login.png");
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#mail-menu-item{
+    background-image: url("/images/mail.png");
+    width: 45px;
+    height: 34px;
+    float: right;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+#info-menu-item{
+    background-image: url("/images/help.png");
+    width: 45px;
+    height: 45px;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+#search-container{
+   /* width: 100%;
+    height: 45px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;*/
+}
+
+.filter-search-input{
+   max-width: 350px;
+    margin: 10px;
+}
+
+#filter-search-button-icon{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background: url("/images/search.png") no-repeat;
+}
+
+#filter-add-news-button-icon{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background: url("/images/add_news.png") no-repeat;
+}
+#config-add-news-button-icon{
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background: url("/images/add_news.png") no-repeat;
+}
+
+#filter-add-news-button{
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+#filter-search-button{
+    flex-shrink: 0;
+}
+
+.search-filter-row{
+    position: relative;
+    display: flex;
+    border-collapse: separate;
+    flex-direction: row;
+    justify-content: flex-end;
+    vertical-align: middle;
+}
+
+.bet-icon-button{
+    height: 45px;
+    width: 45px;
+    margin: 5px;
+    position: relative;
+    padding: 10px;
+}
+.modal-body {
+    padding: 50px;
+}
+#login-create-account{
+    cursor: pointer;
+}
+#login-forgot-password{
+    cursor: pointer;
+}
+
+#news-container{
+   display: inline-block;
+}
+
+#news-body{
+    display: inline-block;
+    float: none;
+}
+
+#news-cell{
+    position: relative;
+}
+#news-outcomes{
+    padding: 10px 30px;
+}
+.news-outcomes-checkbox{
+    display: flex;
+}
+
+.news-outcomes-input{
+    top: -4px;
+    position: relative;
+    margin-right: 10px;
+}
+
+.form-check-label{
+    flex: inherit;
+    margin: inherit;
+}
+
+.news-outcomes-widget-bottom{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    right: 0;
+}
+.news-outcomes-submit{
+    right: 15px;
+    position: absolute;
+}
+.hidden{
+    display: none;
+}
+.news-outcomes-show-active{
+    background-color: #7db223;
+}
+.news-outcomes-show-passive{
+    background-color: #b2dba1;
+}
+.news-bottom{
+    height: 40px;
+    width: 240px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.news-description{
+    position: relative;
+}
+.news-description-min{
+    overflow: hidden;
+    max-height: 135px;
+    text-overflow: ellipsis;
+    position: relative;
+}
+.news-info-row{
+    color: #adadad;
+    display: flex;
+    flex-direction: row;
+}
+
+.news-topic{
+    margin-right: 10px;
+    color: #b19e9e;
+}
+#news-add-outcome{
+    background-image: url("/images/add_news.png");
+    width: 43px;
+    height: 43px;
+    margin: 3px 10px 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.outcome-label{
+    min-width: 200px;
+    height: 40px;
+    margin: 5px 0 0 10px;
+}
+.outcome-label-editor{
+    margin-left: 5px;
+}
+
+.outcome-label-editor-input{
+    width: 200px;
+    height: 40px;
+}
+
+.flex-row{
+    display: flex;
+}
+
+.like_btn{
+    display: inline-block;
+    padding: 0px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.like_btn .btn-default{
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.post-heading{
+    display: flex;
+}
+.dropdown-menu{
+    padding: 10px;
+}
+.avatar_middle{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.pop-news-description{
+    max-height: 50px;
+    overflow: hidden;
+}
+.card-img-top{
+    height: 100%;
+    width: 100%;
+}
+
+.full-news-modal .close{
+    position: absolute;
+    z-index: 1000;
+    right: 10px;
+    top: 10px;
+}
+
+.full-news-modal img{
+    width: 100%;
+}
+
+.full-news-modal .modal-body{
+    padding: 10px;
+}
+
+.full-news-modal label{
+    width: 100%;
+}
+.bet-money-icon{
+    background: url("/images/money.png") 100% 100% no-repeat;
+    width: 20px;
+    height: 20px;
+    float: left;
+    background-size: cover;
+}
+.full-news-title-out{
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    display: inline-table;
+}
+
+.full-news-title{
+    padding: 5px; /* Поля вокруг текста */
+    background: #cccccc; /* Цвет фона */
+    opacity: 0.7; /* Значение прозрачности */
+    filter: alpha(Opacity=70); /* Прозрачность в IE */
+    margin-left: -50%;
+    border-radius: 5px;
+    display: inline-block;
+}
+.full-news-description{
+    margin: 0 30px;
+}
+.carousel a:visited{
+    color: white;
+}
+
+.carousel a:link{
+    color: white;
+}

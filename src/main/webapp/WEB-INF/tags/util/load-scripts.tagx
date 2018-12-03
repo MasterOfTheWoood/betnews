@@ -1,0 +1,52 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0"
+          xmlns:tiles="http://tiles.apache.org/tags-tiles">
+
+  <jsp:output omit-xml-declaration="yes" />
+
+  <spring:theme code="styleSheet" var="roo_css" />
+  <spring:url value="/${roo_css}" var="roo_css_url" />
+  <spring:url value="/resources/images/favicon.ico" var="favicon" />
+  <spring:url value="/resources/styles/bootstrap.css" var="bootstrap_css" />
+  <spring:url value="/resources/styles/comment.css" var="comment_css" />
+  <spring:url value="/resources/styles/bootstrap-theme.css" var="bootstrap_thrame_css" />
+  <spring:url value="/resources/styles/bootstrap-responsive.css" var="bootstrap_responsive_css" />
+  <spring:url value="/resources/styles/bootstrap-formhelpers.min.css" var="bootstrap_formhelpers_css" />
+  <spring:url value="/resources/styles/bootstrap-glyphicons.css" var="bootstrap_glyphicons_css" />
+  <spring:url value="/resources/styles/select2.min.css" var="select2" />
+  <spring:url value="/resources/styles/avatar.css" var="avatar" />
+  <spring:url value="/resources/styles/chat-room.css" var="chat" />
+  <spring:url value="/resources/styles/all.min.css" var="fa" />
+  <spring:url value="/resources/styles/betnews.css" var="castom_css" />
+  <link rel="stylesheet" type="text/css" href="${bootstrap_css}" />
+  <link rel="stylesheet" type="text/css" href="${comment_css}" />
+  <link rel="stylesheet" type="text/css" href="${bootstrap_thrame_css}" />
+  <link rel="stylesheet" type="text/css" href="${bootstrap_responsive_css}" />
+  <link rel="stylesheet" type="text/css" href="${bootstrap_formhelpers_css}" />
+  <link rel="stylesheet" type="text/css" href="${bootstrap_glyphicons_css}" />
+  <link rel="stylesheet" type="text/css" href="${select2}" />
+  <link rel="stylesheet" type="text/css" href="${avatar}" />
+  <link rel="stylesheet" type="text/css" href="${chat}" />
+  <link rel="stylesheet" type="text/css" href="${fa}" />
+  <link rel="stylesheet" type="text/css" media="screen" href="${roo_css_url}" />
+  <link rel="stylesheet" type="text/css" href="${castom_css}" />
+  <link rel="SHORTCUT ICON" href="${favicon}" />
+
+  <spring:url value="/resources/js/libs/Require.js" var="require_url" />
+  <spring:url value='/resources/js/pages/main/MainConfig.js' var="config"/>
+  <script src="${require_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script src="${config}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <!-- Get the user local from the page context (it was set by Spring MVC's locale resolver) -->
+  <c:set var="userLocale">
+    <c:set var="plocale">${pageContext.response.locale}</c:set>
+    <c:out value="${fn:replace(plocale, '_', '-')}" default="en" />
+  </c:set>
+
+  <script type="text/javascript">var djConfig = {parseOnLoad: false, isDebug: false, locale: '${fn:toLowerCase(userLocale)}'};</script>
+
+  <script src="${dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script src="${spring_url}" type="text/javascript"><!-- /required for FF3 and Opera --></script>
+  <script src="${spring_dojo_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+ <!-- <script language="JavaScript" type="text/javascript">dojo.require("dojo.parser");</script>-->
+
+</jsp:root>

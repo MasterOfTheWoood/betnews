@@ -1,0 +1,13 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-29 09:19:25
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-29 09:19:29
+hint
+project --topLevelPackage ru.betnews
+persistence setup --provider HIBERNATE --database MYSQL
+database properties set --key database.password --value 1q2w3e4r
+database properties set --key database.username --value betnews
+database properties set --key database.url --value jdbc:mysql://localhost:3306/betnews
+web mvc setup
+web mvc all --package ~.we
+web mvc all --package ~.web
+web mvc all --package ~.web
+security setup

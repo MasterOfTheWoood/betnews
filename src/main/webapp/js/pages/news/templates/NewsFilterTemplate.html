@@ -1,0 +1,21 @@
+<div id="search-filter-row" class="row-fluid">
+    <div class="input-group search-filter-row">
+        <ul class="nav navbar-nav flex-row">
+            <%topics.forEach(function(topic){%>
+                <li><a href="#" data-topic="<%=topic.get('key')%>"><%=topic.get('name')%></a></li>
+            <%})%>
+        </ul>
+        <select name="type" class="form-control filter-search-input" title="Тип новости">
+            <%types.forEach(function(type){%>
+                <option value="<%=type.get('key')%>"><%=type.get('name')%></option>
+            <%})%>
+        </select>
+        <input type="text" class="form-control filter-search-input" placeholder="Search for...">
+        <button id="filter-search-button" class="btn btn-default bet-icon-button" type="button">
+            <span id="filter-search-button-icon" class="glyphicon" style="background-size: 100%;"></span>
+        </button>
+        <button id="filter-add-news-button" class="btn btn-default bet-icon-button" type="button">
+            <span id="filter-add-news-button-icon" class="glyphicon" style="background-size: 100%;"></span>
+        </button>
+    </div>
+</div>

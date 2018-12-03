@@ -1,0 +1,25 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <%newsList.forEach(function(news, i){%>
+            <li data-target="#carouselExampleIndicators" data-slide-to="<%=i%>" <%if(i == 0){%> class="active" <%}%>></li>
+        <%})%>
+    </ol>
+    <div class="carousel-inner">
+        <%newsList.forEach(function(news, i){%>
+        <div class="item <%if(i == 0){%>active<%}%>">
+            <img class="d-block w-100" src="<%if(news.get('illustration')){%><%=news.get('illustration')%><%} else{ %>/images/news-no-image-<%=i%>.png<%}%>" alt="<%=i%> slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5><%=news.get("title")%></h5>
+            </div>
+        </div>
+        <%})%>
+    </div>
+    <a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>

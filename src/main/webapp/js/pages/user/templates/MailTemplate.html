@@ -1,0 +1,65 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div id="frame" style="width: 100%">
+            <div id="sidepanel">
+                <div id="profile">
+                    <div class="wrap">
+                        <img id="profile-img" src="<%if(currentUser.get('avatarUrl')){%><%=currentUser.get('avatarUrl')%><%} else {%>/images/unonimus.png<%}%>" class="online" alt="" />
+                        <p><%=currentUser.get("userNick")%></p>
+                        <!--<i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                        <div id="status-options">
+                            <ul>
+                                <li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
+                                <li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
+                                <li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
+                                <li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </div>
+                <div id="search">
+                    <label for="dialog-search"><i class="fa fa-search" aria-hidden="true"></i></label>
+                    <input id="dialog-search" type="text" placeholder="Search contacts..." />
+                </div>
+                <div id="contacts">
+                    <ul>
+                        <%dialogs.forEach(function(dialog){%>
+                        <li class="contact" data-user-id="<%=dialog.get('user').get('id')%>"
+                                            data-user-nick="<%=dialog.get('user').get('userNick')%>"
+                                            data-user-avatar="<%=dialog.get('user').get('avatarUrl')%>">
+                            <div class="wrap change-contact">
+                                <span class="contact-status online"></span>
+                                <img src="/images/unonimus.png" alt="" />
+                                <div class="meta">
+                                    <p class="name"><%=dialog.get('user').get('userNick')%></p>
+                                    <p class="preview"><%=dialog.get('mail').get('message')%></p>
+                                </div>
+                            </div>
+                        </li>
+                        <%})%>
+                    </ul>
+                </div>
+                <div id="bottom-bar">
+                    <button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
+                    <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="contact-profile">
+
+                </div>
+                <div class="messages">
+                    <ul></ul>
+                </div>
+                <div class="message-input">
+                    <div class="wrap">
+                        <input type="text" placeholder="Write your message..." />
+                        <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                        <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

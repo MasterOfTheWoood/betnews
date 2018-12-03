@@ -1,0 +1,28 @@
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p>Вы собираетесь подтвердить исход "<%=outcomeDesc%>". <span style="font-weight: bold;">ВНИМАНИЕ</span> изменить это решение будет невозможно!</p>
+            <form action="#">
+                <div class="form-group row">
+                    <label for="confirmation-news-confirmation" class="col-2 col-form-label" style="width: 200px;">Ссылка на подверждение</label>
+                    <div class="col-10">
+                        <input class="form-control" name="confirmation" type="text" id="confirmation-news-confirmation">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="confirmation-news-comment" class="col-2 col-form-label">Комментарий</label>
+                    <div class="col-10">
+                        <textarea id="confirmation-news-comment" name="comment" rows="10" cols="60"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="alert-close">Ok</button>
+        </div>
+    </div>
+</div>

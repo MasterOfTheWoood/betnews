@@ -1,0 +1,25 @@
+<div class="comment-body">
+<div class="comment-main-level">
+    <!-- Avatar -->
+    <div class="comment-avatar"><img src="<%if(user.avatar){%><%=user.avatar%><%}else{%>/images/unonimus.png<%}%>" alt=""></div>
+    <!-- Contenedor del Comentario -->
+    <div class="comment-box">
+        <div class="comment-head">
+            <h6 class="comment-name by-author"><a href="#"><%=user.userNick%></a></h6>
+            <span><%=date%></span>
+            <i class="fa fa-reply reply" data-comment-id="<%=id%>"></i>
+            <span class="like-news">
+                <i class="glyphicon glyphicon-thumbs-up icon" data-comment-id="<%=id%>"><%=likes.length%></i>
+            </span>
+            <span class="dislike-news">
+                <i class="glyphicon glyphicon-thumbs-down icon" data-comment-id="<%=id%>"><%=dislikes.length%></i>
+            </span>
+        </div>
+        <div class="comment-content">
+            <%=description%>
+        </div>
+    </div>
+</div>
+<!-- Respuestas de los comentarios -->
+<ul class="comments-list reply-list" id="news-comments-container-<%=id%>"></ul>
+</div>
